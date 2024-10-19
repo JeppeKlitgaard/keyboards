@@ -1,0 +1,24 @@
+#include "zmk-helpers/helper.h"
+#include "keys.h"
+
+// Left Hand
+ZMK_BEHAVIOR(hml, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R_NON_THUMB_SWEEP KEYS_THUMBS_SWEEP>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
+
+// Right Hand
+ZMK_BEHAVIOR(hmr, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_L_NON_THUMB_SWEEP KEYS_THUMBS_SWEEP>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
