@@ -20,7 +20,7 @@ uv run west build \
     `# -DZMK_CONFIG="/home/jeppe/Code/keyboard/miryoku_zmk/config"` \
     -DZMK_CONFIG="/home/jeppe/Code/keyboards/v1/zmk-config/config" \
     -DSHIELD="hillside52_$SIDE" \
-    -DZMK_EXTRA_MODULES="/home/jeppe/Code/keyboards/v1/zmk-helpers"
+    -DZMK_EXTRA_MODULES="/home/jeppe/Code/keyboards/v1/zmk-config;/home/jeppe/Code/keyboards/v1/zmk-helpers"
 
 cd $_INITIAL_PWD
 mkdir -p build
