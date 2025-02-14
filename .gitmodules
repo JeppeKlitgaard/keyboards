@@ -4,3 +4,6 @@
 [submodule "v1/zmk"]
 	path = v1/zmk
 	url = https://github.com/zmkfirmware/zmk.git
+[submodule "v1/hillside-module"]
+	path = v1/hillside-module
+	url = git@github.com:JeppeKlitgaard/hillside-module.git
