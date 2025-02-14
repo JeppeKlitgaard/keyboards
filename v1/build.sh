@@ -15,10 +15,9 @@ cd "./zmk/app"
 uv run west build \
     -b "nice_nano_v2" \
     -d "build/$SIDE" \
-    `# -S studio-rpc-usb-uart` \
+    -S studio-rpc-usb-uart \
     `# -p` \
     -- \
-    `# -DZMK_CONFIG="/home/jeppe/Code/keyboard/miryoku_zmk/config"` \
     -DZMK_CONFIG="/home/jeppe/Code/keyboards/v1/zmk-config/config" \
     -DSHIELD="hillside_$SIDE" \
     -DZMK_EXTRA_MODULES="/home/jeppe/Code/keyboards/v1/hillside-module;/home/jeppe/Code/keyboards/v1/zmk-config;/home/jeppe/Code/keyboards/v1/zmk-helpers"
