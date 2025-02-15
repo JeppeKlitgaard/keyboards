@@ -2,7 +2,7 @@
 
 # Usage
 # ./flash.sh SIDE WIN_MOUNT_LETTER
-# Where SIDE is either 'left' or 'right' or 'reset'
+# Where SIDE is either 'left' or 'right' or 'reset' or 'tester'
 # Where WIN_MOUNT_LETTER is a windows mount point letter such as 'F' or 'J'
 set -xe
 
