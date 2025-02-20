@@ -1,0 +1,4 @@
+// Extra time on sticky layers
+&sl {
+    release-after-ms = <3000>;
+};

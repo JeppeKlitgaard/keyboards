@@ -1,29 +1,37 @@
 #include "zmk-helpers/helper.h"
 #include "keys.h"
+#include "homerow_mods.dtsi"
+// See: homerow_mods.h
 
-#define HRM_FLAVOR "balanced"
-#define HRM_TAPPING_TERM_MS 280
-#define HRM_QUICK_TAP_MS 175
-#define HRM_REQUIRE_PRIOR_IDLE_MS 150
-
-// Left Hand
-ZMK_BEHAVIOR(hml, hold_tap,
+// Left Hand - Sigma on Gallium
+ZMK_BEHAVIOR(hml_greek, hold_tap,
     flavor = HRM_FLAVOR;
     tapping-term-ms = <HRM_TAPPING_TERM_MS>;
     quick-tap-ms = <HRM_QUICK_TAP_MS>;                // repeat on tap-into-hold
     require-prior-idle-ms = <HRM_REQUIRE_PRIOR_IDLE_MS>;
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp>, <&el_sigma>;
     hold-trigger-key-positions = <KEYS_R_NON_THUMB_SWEEP KEYS_THUMBS_SWEEP>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
-// Right Hand
-ZMK_BEHAVIOR(hmr, hold_tap,
+// Left Hand - Sigma on Gallium
+ZMK_BEHAVIOR(hml_greek_var, hold_tap,
     flavor = HRM_FLAVOR;
     tapping-term-ms = <HRM_TAPPING_TERM_MS>;
     quick-tap-ms = <HRM_QUICK_TAP_MS>;                // repeat on tap-into-hold
     require-prior-idle-ms = <HRM_REQUIRE_PRIOR_IDLE_MS>;
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp>, <&el_final_sigma>;
+    hold-trigger-key-positions = <KEYS_R_NON_THUMB_SWEEP KEYS_THUMBS_SWEEP>;
+    hold-trigger-on-release;             // delay positional check until key-release
+)
+
+// Right Hand - Eta on Gallium
+ZMK_BEHAVIOR(hmr_greek, hold_tap,
+    flavor = HRM_FLAVOR;
+    tapping-term-ms = <HRM_TAPPING_TERM_MS>;
+    quick-tap-ms = <HRM_QUICK_TAP_MS>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <HRM_REQUIRE_PRIOR_IDLE_MS>;
+    bindings = <&kp>, <&el_eta>;
     hold-trigger-key-positions = <KEYS_L_NON_THUMB_SWEEP KEYS_THUMBS_SWEEP>;
     hold-trigger-on-release;             // delay positional check until key-release
 )
